@@ -1,0 +1,20 @@
+{
+  "name": "trackian",
+  "description": "Trackian Marketing Analytics MCP Integration for Claude Code",
+  "version": "1.0.0",
+  "author": {
+    "name": "Trackian",
+    "email": "support@trackian.com"
+  },
+  "mcpServers": {
+    "trackian": {
+      "command": "node",
+      "args": [
+        "mcp-bridge.mjs"
+      ],
+      "env": {
+        "TRACKIAN_MCP_TOKEN": "YOUR_TMCP_TOKEN_HERE"
+      }
+    }
+  }
+}
