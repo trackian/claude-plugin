@@ -1,6 +1,6 @@
 ---
 description: Where people leave between the Meta ad click and the purchase, per ad set, and whether the ad, the page, the offer or the checkout is the leak.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: mcp__plugin_trackian_trackian, Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "funnel-dropoff"` (pass projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

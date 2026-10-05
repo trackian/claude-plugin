@@ -1,6 +1,6 @@
 ---
 description: Explain one known incident (project + date + pattern) end to end.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: mcp__plugin_trackian_trackian, Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "deep-dive"`, passing `projectRef`, `date`, and `code` in `args` if the user gave them. The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

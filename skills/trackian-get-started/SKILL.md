@@ -22,12 +22,12 @@ Get the user from a fresh install to a first real answer in as few steps as poss
 ## 2. See what is there
 
 - Call `list_projects`. Show the projects by name (with the website when it helps), never by internal id.
-- If there are no projects, or a project has no platforms connected, send them to the Trackian app at https://trackian.app to add the project and connect Google Analytics, Google Ads, Meta Ads, Search Console, their store and the rest under Setup > Platforms. Trackian needs a few hours after a first connection to pull history; say so plainly.
+- If there are no projects, or a project has no platforms connected, send them to the Trackian app at https://trackian.app to add the project and connect Google Analytics, Google Ads, Meta Ads, TikTok Ads, Search Console, their store and the rest under Setup > Platforms. Trackian needs a few hours after a first connection to pull history; say so plainly.
 - For one project, `get_project_setup_status` tells you what is still unconfigured (alerts, KPIs, daily summary). Mention the gaps in one line and offer `/trackian:setup-project` for later.
 
 ## 3. Save how they want answers
 
-Run the Trackian first-run steps: call `get_command` with `name: "start"` and follow the returned `reference` (language, account type, detail level, projects to watch). Save the profile to `${CLAUDE_PLUGIN_DATA}/profile.md` - that is where this plugin keeps it, in place of the `custom/profile.md` the reference names. Every Trackian command in this plugin reads it from there. The reference's capability tour uses bare names such as `/investigate`; in this plugin they are `/trackian:investigate`, `/trackian:weekly-review`, and so on.
+Run the Trackian first-run steps: call `get_command` with `name: "start"` and follow the returned `reference` (language, account type, detail level, projects to watch). Save the profile to `${CLAUDE_PLUGIN_DATA}/profile.md` - that is where this plugin keeps it, in place of the `custom/profile.md` the reference names. Every Trackian command in this plugin reads it from there. Claude Code asks the user to allow that save, because the folder sits inside its own settings folder; say so before you write, and if they decline, use their answers for this session only. The reference's capability tour uses bare names such as `/investigate`; in this plugin they are `/trackian:investigate`, `/trackian:weekly-review`, and so on.
 
 If they want to skip the questions, skip them - the profile is optional and `/trackian:setup` can run again any time.
 
@@ -42,7 +42,9 @@ Offer one concrete first look for what is connected, and run it on a yes:
 ## Troubleshooting
 
 - **Sign-in page says the link expired:** start again from `/mcp` > `plugin:trackian:trackian` > Authenticate; the link is single-use.
-- **Signed in, but a change is refused:** this connection does not have permission to make that change. An account owner can turn it on in Trackian under Settings > AI Agent Setup.
+- **The browser sign-in finishes, but Claude Code still says authentication failed:** the company's Trackian plan may not include AI agent access. Signing in again will not change that; send them to support@trackian.com or their plan settings in Trackian. Do not loop on re-authentication.
+- **Every call says the account is not on an active plan:** the Trackian subscription has lapsed. Signing in again will not help; they renew in the Trackian app, then retry.
+- **Signed in, but a change is refused:** this connection does not have permission to make that change. Changes to live ad campaigns, store products and orders, and Search Console are off for a new connection. An account owner can turn them on in Trackian under Settings > AI Agent Setup.
 - **Signed in to the wrong company:** switch to the right company in the Trackian app, then in `/mcp` pick `plugin:trackian:trackian` and authenticate again.
 - **A platform shows no data:** reconnect it in the Trackian app under Setup > Platforms.
 - **Anything else:** support@trackian.com.

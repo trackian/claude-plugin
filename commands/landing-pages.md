@@ -1,6 +1,6 @@
 ---
 description: Paid landing pages converting far below the account, mobile speed and mobile conversion gaps, and pages paid clicks reach but analytics never sees.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: mcp__plugin_trackian_trackian, Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "landing-pages"` (pass projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

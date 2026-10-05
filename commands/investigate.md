@@ -1,6 +1,6 @@
 ---
 description: Find what changed in a project and root-cause it.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: mcp__plugin_trackian_trackian, Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "investigate"`. If the user named a specific project or date, pass them in `args` as `projectRef` and/or `date`. The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

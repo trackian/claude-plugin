@@ -4,12 +4,12 @@
     "name": "Trackian",
     "email": "support@trackian.com"
   },
-  "description": "Trackian plugin for Claude Code: your live marketing data, guided analytics workflows and confirmed ad changes.",
+  "description": "Trackian plugin for Claude Code: your live marketing data, guided analytics workflows and changes you confirm.",
   "plugins": [
     {
       "name": "trackian",
       "displayName": "Trackian Marketing Analytics",
-      "description": "Ask Claude why sales moved, which ads waste money and what to fix next, answered from your live Trackian data across GA4, Google Ads, Meta Ads, TikTok Ads, Microsoft Ads, Search Console, Merchant Center, Tag Manager and your store.",
+      "description": "Ask Claude why sales moved, which ads waste money and what to fix next, answered from your live Trackian data across GA4, Google Ads, Meta Ads, TikTok Ads, Search Console and your store.",
       "source": "./"
     }
   ]

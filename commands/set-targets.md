@@ -1,6 +1,6 @@
 ---
 description: Set monthly KPI targets for a project - the numbers behind the Business Health panel. Every change previews first and needs your OK.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: mcp__plugin_trackian_trackian, Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "set-targets"` (pass projectRef in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 
