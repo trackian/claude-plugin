@@ -29,13 +29,13 @@ claude plugin install trackian-mcp-server@claude-community
 - [ ] `claude --plugin-dir . plugin details trackian` lists every command, both skills, the agent and the `trackian` MCP server.
 - [ ] `claude --plugin-dir . mcp list` shows `plugin:trackian:trackian` as "Needs authentication" before sign-in.
 - [ ] A real sign-in through `/mcp` > `plugin:trackian:trackian` > Authenticate completes, and `/trackian:setup` reaches a first answer.
-- [ ] No secret or API key anywhere: `grep -rn tmcp_ .` finds nothing.
+- [ ] No secret or API key anywhere: `grep -rln tmcp_ --exclude=SUBMISSION.md .` finds nothing.
 - [ ] No em or en dashes in any file.
 - [ ] Every command's `get_command` name exists on the Trackian server.
 
 ## How the plugin is built
 
-- **Connection:** `.mcp.json` points at Trackian's remote MCP server (`https://api.trackian.app/mcp`). Claude Code signs in with OAuth (dynamic client registration, PKCE, browser login) and requests `mcp:read mcp:write`, the same access a downloaded Trackian agent folder gets. Every write still previews first and waits for the owner's yes.
+- **Connection:** `.mcp.json` points at Trackian's remote MCP server (`https://api.trackian.app/mcp`). Claude Code signs in with OAuth (dynamic client registration, PKCE, browser login) and requests `mcp:read mcp:write`, the same access a downloaded Trackian agent folder gets. Most writes preview first and wait for the owner's yes; the few that apply in a single call say so in their own descriptions, and the `trackian` skill asks first for those too.
 - **Commands:** each one is a thin stub that fetches its current steps from Trackian with `get_command`, so improving a workflow is a server-side change that needs no plugin release. The workflow text is shared with Trackian's downloadable agent folder; the `trackian` skill maps that folder's paths to the plugin's (`${CLAUDE_PLUGIN_DATA}/profile.md`, `trackian-reports/`, `/trackian:<name>`).
 - **Skills:** `trackian` carries the answer rules (the plugin's equivalent of the agent folder's `AGENTS.md`); `trackian-get-started` carries sign-in and first-run.
 - **Agent:** `marketing-analyst` for long, multi-step analysis.

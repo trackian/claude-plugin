@@ -13,9 +13,10 @@ Get the user from a fresh install to a first real answer in as few steps as poss
 - If the Trackian tools are not available, or the call fails with an authentication or "needs authentication" error, the plugin is not signed in yet. Tell the user, in these words or close to them:
   1. Type `/mcp` and press Enter.
   2. Pick `plugin:trackian:trackian` and choose **Authenticate**.
-  3. A Trackian page opens in the browser. Sign in, or create an account there if you do not have one yet, and approve the connection.
+  3. A Trackian page opens in the browser. Sign in, or create an account there if you do not have one yet. The page sends you back to Claude Code.
   4. Come back here and say "done".
   Retry `get_connected_account` after they confirm.
+- If they already signed in and the tools are still missing, ask what `/mcp` shows for `plugin:trackian:trackian`. "Needs authentication" means sign in again. "Failed" means Trackian refused the connection - most often a lapsed subscription - and signing in again will not help: send them to renew in the Trackian app or to support@trackian.com, and do not loop on sign-in.
 - If `/mcp` does not list `plugin:trackian:trackian` at all, the plugin is not loaded: ask them to run `/plugin`, check that the Trackian plugin is installed and enabled, then restart Claude Code.
 - Never ask for an API key, token or password in the chat. The sign-in page handles it.
 
@@ -43,8 +44,8 @@ Offer one concrete first look for what is connected, and run it on a yes:
 
 - **Sign-in page says the link expired:** start again from `/mcp` > `plugin:trackian:trackian` > Authenticate; the link is single-use.
 - **The browser sign-in finishes, but Claude Code still says authentication failed:** the company's Trackian plan may not include AI agent access. Signing in again will not change that; send them to support@trackian.com or their plan settings in Trackian. Do not loop on re-authentication.
-- **Every call says the account is not on an active plan:** the Trackian subscription has lapsed. Signing in again will not help; they renew in the Trackian app, then retry.
-- **Signed in, but a change is refused:** this connection does not have permission to make that change. Changes to live ad campaigns, store products and orders, and Search Console are off for a new connection. An account owner can turn them on in Trackian under Settings > AI Agent Setup.
+- **Signed in before, but the tools are missing and `/mcp` shows the connection as failed:** the Trackian subscription has most likely lapsed, so the server refuses the connection. Signing in again will not help; they renew in the Trackian app, then restart Claude Code.
+- **Signed in, but a change is refused:** this connection does not have permission to make that change. Changes to live ad campaigns and to WooCommerce or Magento products and orders are off for a new connection; an account owner can turn them on in Trackian under Settings > AI Agent Setup. Search Console changes and Shopify edits are not available yet.
 - **Signed in to the wrong company:** switch to the right company in the Trackian app, then in `/mcp` pick `plugin:trackian:trackian` and authenticate again.
 - **A platform shows no data:** reconnect it in the Trackian app under Setup > Platforms.
 - **Anything else:** support@trackian.com.
