@@ -1,20 +1,46 @@
 {
   "name": "trackian",
-  "description": "Trackian Marketing Analytics MCP Integration for Claude Code",
-  "version": "1.0.0",
+  "displayName": "Trackian Marketing Analytics",
+  "version": "2.0.0",
+  "description": "Ask Claude why sales moved, which ads waste money and what to fix next, answered from your live Trackian data: GA4, Google Ads, Meta Ads, TikTok Ads, Search Console and your Shopify, WooCommerce or Magento store, plus the anomalies Trackian Sentinel detects every night. Guided workflows for investigations, weekly reviews, pacing against targets, ad audits, creative fatigue, wasted search terms, product and geo waste, attribution gaps and branded reports. Changes to KPI targets, alerts and funnels show a preview and wait for your yes; changes to live ad campaigns stay off until an account owner allows them. Sign in with your Trackian account; no API key to paste.",
   "author": {
     "name": "Trackian",
-    "email": "support@trackian.com"
+    "email": "support@trackian.com",
+    "url": "https://trackian.com"
   },
-  "mcpServers": {
-    "trackian": {
-      "command": "node",
-      "args": [
-        "mcp-bridge.mjs"
-      ],
-      "env": {
-        "TRACKIAN_MCP_TOKEN": "YOUR_TMCP_TOKEN_HERE"
-      }
-    }
-  }
+  "homepage": "https://trackian.com",
+  "repository": "https://github.com/trackian/claude-plugin",
+  "license": "MIT",
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/trackian/claude-plugin#readme",
+  "supportUrl": "https://help.trackian.com",
+  "privacyPolicyUrl": "https://trackian.com/privacy-center/privacy-policy/",
+  "termsOfServiceUrl": "https://trackian.com/privacy-center/terms-and-conditions/",
+  "keywords": [
+    "marketing",
+    "analytics",
+    "marketing-analytics",
+    "anomaly-detection",
+    "ga4",
+    "google-analytics",
+    "google-ads",
+    "meta-ads",
+    "facebook-ads",
+    "instagram-ads",
+    "tiktok-ads",
+    "search-console",
+    "seo",
+    "shopify",
+    "woocommerce",
+    "magento",
+    "ecommerce",
+    "lead-generation",
+    "ppc",
+    "paid-media",
+    "roas",
+    "attribution",
+    "kpi",
+    "reporting",
+    "mcp"
+  ]
 }
