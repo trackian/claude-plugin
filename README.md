@@ -105,7 +105,7 @@ Or just ask a question. You do not need a command.
 
 ## Upgrading from version 1
 
-Version 1 was listed in the community directory as `trackian-mcp-server`. It asked for an API key and connected through an address that no longer answers, so it cannot reach Trackian any more. Remove it, then install version 2 as shown under [Installation](#installation):
+Version 1 was listed in the community directory as `trackian-mcp-server`. It asked for an API key and connected through an address that no longer answers, so it cannot reach Trackian any more. If `/plugin` shows `trackian-mcp-server` at version 1.0.0, remove it, then install version 2 as shown under [Installation](#installation):
 
 ```bash
 claude plugin uninstall trackian-mcp-server@claude-community

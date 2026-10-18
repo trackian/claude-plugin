@@ -17,18 +17,18 @@ Source: [Move an earlier submission to the developer portal](https://claude.com/
 2. If the `trackian-mcp-server` submission has a **Withdraw** button, select it. Then submit the plugin again at [claude.ai/directory/manage](https://claude.ai/directory/manage) from a claude.ai account: **Submit new** > **Plugin bundle** > this repository, plugin folder = the repository root, branch `main`.
 3. If there is no Withdraw button, email `directory@anthropic.com` and ask them to move the `trackian-mcp-server` listing (repository `trackian/claude-plugin`) to the developer portal. Do not start a second submission for the same repository first: the portal refuses it with "Already submitted by another organization" until the old one is moved.
 4. Submit from the organization that should own the listing long term. The first organization to submit a repository folder holds that listing.
-5. In the portal, set the listing description to the text below. The directory shows `README.md` as the listing's description, so keep the README's opening paragraph current too.
+5. The portal reads the listing details from `.claude-plugin/plugin.json` and `README.md`; to change them, edit those files and validate again. The `plugin.json` description already holds the version 2 text, which replaces the old community entry's own version 1 description:
 
    > Ask Claude why sales moved, which ads waste money and what to fix next, answered from your live Trackian data: GA4, Google Ads, Meta Ads, TikTok Ads, Search Console and your Shopify, WooCommerce or Magento store, plus the anomalies Trackian Sentinel detects every night. Guided workflows for investigations, weekly reviews, pacing against targets, ad audits, creative fatigue, wasted search terms, product and geo waste, attribution gaps and branded reports. Changes to KPI targets, alerts and funnels show a preview and wait for your yes; changes to live ad campaigns stay off until an account owner allows them. Sign in with your Trackian account; no API key to paste.
 
 6. Run the portal's **Validate**, fix anything marked Blocks, then **Submit for review**. A person reviews a new listing before it goes live.
 
-The plugin's `name` in `plugin.json` is `trackian`; the old entry is named `trackian-mcp-server`. If the move keeps the old name, nothing changes for people who installed it. If it is resubmitted under `trackian`, people on version 1 have to uninstall `trackian-mcp-server` and install `trackian` (the README's "Upgrading from version 1" section says how).
+The plugin's `name` in `plugin.json` is `trackian`; the old entry is named `trackian-mcp-server`. If the move keeps the old name, nothing changes for people who installed it. If it is resubmitted under `trackian`, people on version 1 have to uninstall `trackian-mcp-server` and install `trackian` (the README's "Upgrading from version 1" section says how, and only applies to someone who still sees version 1.0.0).
 
 ## Sending an update after the move
 
 1. Merge the change to `main` here and raise `version` in `.claude-plugin/plugin.json`. The directory asks for a new version with every release.
-2. The portal picks up new commits on the tracked branch and scans each version. Follow its status at [claude.ai/directory/manage](https://claude.ai/directory/manage); once published, people who have the plugin get the new version through `/plugin`.
+2. The portal picks up new commits on the tracked branch and scans each version. A version that passes waits until someone selects **Publish** in the portal (unless auto-publish is switched on), then a reviewer publishes it. Follow its status at [claude.ai/directory/manage](https://claude.ai/directory/manage); once published, people who have the plugin get the new version through `/plugin`.
 3. The listing's **Usage** tab shows installs, versions and error rates.
 
 ## A claude.ai connector listing (separate submission)
