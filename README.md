@@ -11,19 +11,12 @@ Ask Claude why sales moved, which ads waste money and what to fix next, answered
 
 ## Installation
 
-From the Claude Code community directory:
-
-```bash
-claude plugin marketplace add anthropics/claude-plugins-community
-claude plugin install trackian-mcp-server@claude-community
-```
-
-Or install from this repository:
-
 ```bash
 claude plugin marketplace add https://github.com/trackian/claude-plugin
 claude plugin install trackian@trackian
 ```
+
+Installed version 1 as `trackian-mcp-server` from the community directory? See [Upgrading from version 1](#upgrading-from-version-1).
 
 ## Setup
 
@@ -109,6 +102,14 @@ Or just ask a question. You do not need a command.
 - **Sign-in replaces the API key.** Version 1 asked you to paste a key into `plugin.json` and ran a local bridge to an address that no longer answers. Version 2 connects straight to `api.trackian.app` and signs in through your browser.
 - **New `/trackian:setup`** and every Trackian guided workflow that is live today as a `/trackian:` command, the same workflows the downloadable Trackian agent folder runs. Merchant Center, Microsoft Ads and Tag Manager workflows join once Trackian switches those platforms on.
 - **Removed:** `/trackian:anomaly` (use `/trackian:investigate` or `/trackian:deep-dive`), `/trackian:analyze` (ask the question directly; Trackian answers from its reports and custom dashboards), and the three helper agents (replaced by one `marketing-analyst`). `/trackian:report` now saves a branded HTML report instead of answering in chat.
+
+## Upgrading from version 1
+
+Version 1 was listed in the community directory as `trackian-mcp-server`. It asked for an API key and connected through an address that no longer answers, so it cannot reach Trackian any more. If `/plugin` shows `trackian-mcp-server` at version 1.0.0, remove it, then install version 2 as shown under [Installation](#installation):
+
+```bash
+claude plugin uninstall trackian-mcp-server@claude-community
+```
 
 ## Privacy
 

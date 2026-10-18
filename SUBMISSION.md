@@ -4,24 +4,36 @@ How this plugin reaches Claude Code users, and what to send Anthropic when it ch
 
 ## Where it is listed
 
-The plugin is listed in Anthropic's community marketplace, [`anthropics/claude-plugins-community`](https://github.com/anthropics/claude-plugins-community), as `trackian-mcp-server`. That marketplace is a read-only mirror of Anthropic's internal review pipeline: pull requests against it are closed automatically, and each entry is pinned to one commit of this repository. A new commit here reaches users only after Anthropic reviews it.
+- **Claude Code community marketplace** ([`anthropics/claude-plugins-community`](https://github.com/anthropics/claude-plugins-community)) as `trackian-mcp-server`. As of 2026-10-18 that entry is still pinned to commit `4e16206`, version 1.0.0, which asks for an API key and connects to `api.trackian.com/mcp`, an address that no longer answers. Version 2 never reached it. The entry also carries its own version 1 description, which overrides `plugin.json`.
+- **Not listed** in claude.ai's directory, as a plugin or as a connector.
 
-Install from the community marketplace:
+The community marketplace is a read-only mirror of Anthropic's review pipeline: pull requests against it are closed automatically. The entry was submitted through the earlier Claude Console form, and Anthropic's docs say such a listing "stays as it is" until it is moved to the developer portal at [claude.ai/directory/manage](https://claude.ai/directory/manage). Until then no new commit here reaches users of the directory.
 
-```bash
-claude plugin marketplace add anthropics/claude-plugins-community
-claude plugin install trackian-mcp-server@claude-community
-```
+## Moving the listing to the developer portal (once)
 
-## Sending an update
+Source: [Move an earlier submission to the developer portal](https://claude.com/docs/directory/publish#move-an-earlier-submission-to-the-developer-portal), read 2026-10-18.
 
-1. Merge the change to `main` here and note the commit sha.
-2. Submit it through the plugin directory form: https://clau.de/plugin-directory-submission. Say it updates the existing `trackian-mcp-server` listing, and give this repository and the new sha.
-3. Replace the listing description too. This is required: the community entry carries its own description, which overrides `plugin.json`, and the live one still advertises version 1 features (data-warehouse queries, the old anomaly protocol) that no longer exist. Use:
+1. Sign in to the Claude Console with the account that made the first submission and open [Plugin submissions](https://platform.claude.com/plugins/submissions).
+2. If the `trackian-mcp-server` submission has a **Withdraw** button, select it. Then submit the plugin again at [claude.ai/directory/manage](https://claude.ai/directory/manage) from a claude.ai account: **Submit new** > **Plugin bundle** > this repository, plugin folder = the repository root, branch `main`.
+3. If there is no Withdraw button, email `directory@anthropic.com` and ask them to move the `trackian-mcp-server` listing (repository `trackian/claude-plugin`) to the developer portal. Do not start a second submission for the same repository first: the portal refuses it with "Already submitted by another organization" until the old one is moved.
+4. Submit from the organization that should own the listing long term. The first organization to submit a repository folder holds that listing.
+5. The portal reads the listing details from `.claude-plugin/plugin.json` and `README.md`; to change them, edit those files and validate again. The `plugin.json` description already holds the version 2 text, which replaces the old community entry's own version 1 description:
 
    > Ask Claude why sales moved, which ads waste money and what to fix next, answered from your live Trackian data: GA4, Google Ads, Meta Ads, TikTok Ads, Search Console and your Shopify, WooCommerce or Magento store, plus the anomalies Trackian Sentinel detects every night. Guided workflows for investigations, weekly reviews, pacing against targets, ad audits, creative fatigue, wasted search terms, product and geo waste, attribution gaps and branded reports. Changes to KPI targets, alerts and funnels show a preview and wait for your yes; changes to live ad campaigns stay off until an account owner allows them. Sign in with your Trackian account; no API key to paste.
 
-4. Once approved, the community marketplace entry moves to the new sha and users get it through `/plugin`.
+6. Run the portal's **Validate**, fix anything marked Blocks, then **Submit for review**. A person reviews a new listing before it goes live.
+
+The plugin's `name` in `plugin.json` is `trackian`; the old entry is named `trackian-mcp-server`. If the move keeps the old name, nothing changes for people who installed it. If it is resubmitted under `trackian`, people on version 1 have to uninstall `trackian-mcp-server` and install `trackian` (the README's "Upgrading from version 1" section says how, and only applies to someone who still sees version 1.0.0).
+
+## Sending an update after the move
+
+1. Merge the change to `main` here and raise `version` in `.claude-plugin/plugin.json`. The directory asks for a new version with every release.
+2. The portal picks up new commits on the tracked branch and scans each version. A version that passes waits until someone selects **Publish** in the portal (unless auto-publish is switched on), then a reviewer publishes it. Follow its status at [claude.ai/directory/manage](https://claude.ai/directory/manage); once published, people who have the plugin get the new version through `/plugin`.
+3. The listing's **Usage** tab shows installs, versions and error rates.
+
+## A claude.ai connector listing (separate submission)
+
+Anthropic's advice for a product that runs its own server is two submissions from the same organization: the remote MCP server (`https://api.trackian.app/mcp`) as an **MCP connector**, and this plugin as a **plugin bundle** pointing at the same address, then pair the two listings. The connector needs OAuth (done), a title and read-only or destructive label on every tool (done on the Trackian server), a docs link, privacy policy, support contact, icon and a populated test account for the reviewers. That submission is planned separately.
 
 ## Pre-submission checklist
 
