@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "trackian",
-      "displayName": "Trackian Marketing Analytics",
+      "displayName": "Trackian - Ad Waste and Sales Alerts for Online Stores",
       "description": "Ask Claude why sales moved, which ads waste money and what to fix next, answered from your live Trackian data across GA4, Google Ads, Meta Ads, TikTok Ads, Search Console and your store.",
       "source": "./"
     }
