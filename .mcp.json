@@ -3,9 +3,6 @@
     "trackian": {
       "type": "http",
       "url": "https://api.trackian.app/mcp",
-      "headers": {
-        "X-Trackian-Client": "claude-plugin"
-      },
       "oauth": {
         "scopes": "mcp:read mcp:write"
       }
