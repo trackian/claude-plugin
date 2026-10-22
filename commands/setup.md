@@ -1,6 +1,6 @@
 ---
 description: Set up Trackian - sign in, see your projects and connected platforms, choose how answers are written, and get a first answer.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: Read, AskUserQuestion
 ---
 Follow the `trackian-get-started` skill from the top:
 
