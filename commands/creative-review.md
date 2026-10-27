@@ -1,6 +1,6 @@
 ---
 description: Review the Facebook ad creatives and texts - what each ad shows and says, which attributes drive results, and the next variants to test.
-allowed-tools: mcp__plugin_trackian_trackian, Read, Write, Edit, AskUserQuestion
+allowed-tools: Read, Edit(trackian-reports/**), AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "creative-review"` (pass projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

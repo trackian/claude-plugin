@@ -44,6 +44,7 @@ Anthropic's advice for a product that runs its own server is two submissions fro
 - [ ] No secret or API key anywhere: `grep -rln tmcp_ --exclude=SUBMISSION.md .` finds nothing.
 - [ ] No em or en dashes in any file.
 - [ ] Every command's `get_command` name exists on the Trackian server.
+- [ ] No `allowed-tools` line names an MCP tool (the `mcp__plugin_...` form is Claude Code only and the directory warns on it) or a bare `Write`/`Edit`; file writes are scoped as `Edit(trackian-reports/**)`, and the profile write under `${CLAUDE_PLUGIN_DATA}` goes through the normal permission prompt.
 
 ## How the plugin is built
 
