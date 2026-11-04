@@ -9,4 +9,4 @@ Follow the `trackian-get-started` skill from the top:
 3. Run the first-run questions from `get_command` with `name: "start"`, and save the profile to `${CLAUDE_PLUGIN_DATA}/profile.md` (this plugin's place for the `custom/profile.md` the reference names). If a profile already exists there, show it and ask what to change instead of starting over.
 4. Offer one first answer for what is connected and run it on a yes.
 
-Never ask for an API key, token or password in the chat.
+Never ask the user to type a password or any other secret into the chat.

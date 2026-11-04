@@ -84,6 +84,6 @@ Trackian's workflow steps are shared with its downloadable agent folder, so some
 
 ## Rules
 
-- Trackian sign-in is handled by Claude Code (`/mcp`). Never ask the user to paste an API key, token or password into the chat.
+- Trackian sign-in is handled by Claude Code (`/mcp`). Never ask the user to type a password or any other secret into the chat.
 - Save any report, HTML export or image you generate into `trackian-reports/`, not the folder root.
 - Trackian tools accept an optional `intent` field. If you set it, use a short task label (for example "weekly revenue check") with no personal data; Trackian stores it with the request in its usage log for support.
