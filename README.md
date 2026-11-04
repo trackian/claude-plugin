@@ -99,7 +99,7 @@ Or just ask a question. You do not need a command.
 
 ## What changed in 2.0
 
-- **No saved profile (2.0.8).** `/trackian:setup` no longer writes a profile file; its answers apply to the conversation you give them in. A `.trackian/profile.md` or plugin-data profile from an earlier version is not read and can be deleted.
+- **No saved profile (2.0.8).** `/trackian:setup` no longer writes a profile file; its answers apply to the conversation you give them in. A profile file saved by an earlier version is not read any more and can be deleted.
 - **Browser sign-in.** Version 2 connects straight to `api.trackian.app` and signs in through your browser. Version 1 connected to an address that no longer answers.
 - **New `/trackian:setup`** and every Trackian guided workflow that is live today as a `/trackian:` command, the same workflows the downloadable Trackian agent folder runs. Merchant Center, Microsoft Ads and Tag Manager workflows join once Trackian switches those platforms on.
 - **Removed:** `/trackian:anomaly` (use `/trackian:investigate` or `/trackian:deep-dive`), `/trackian:analyze` (ask the question directly; Trackian answers from its reports and custom dashboards), and the three helper agents (replaced by one `marketing-analyst`). `/trackian:report` now saves a branded HTML report instead of answering in chat.
