@@ -18,7 +18,7 @@ Get the user from a fresh install to a first real answer in as few steps as poss
   Retry `get_connected_account` after they confirm.
 - If they already signed in and the tools are still missing, ask what `/mcp` shows for `plugin:trackian:trackian`. "Needs authentication" means sign in again. "Failed" means Trackian refused the connection - most often a lapsed subscription - and signing in again will not help: send them to renew in the Trackian app or to support@trackian.com, and do not loop on sign-in.
 - If `/mcp` does not list `plugin:trackian:trackian` at all, the plugin is not loaded: ask them to run `/plugin`, check that the Trackian plugin is installed and enabled, then restart Claude Code.
-- Never ask for an API key, token or password in the chat. The sign-in page handles it.
+- Never ask the user to type a password or any other secret into the chat. The sign-in page handles it.
 
 ## 2. See what is there
 
