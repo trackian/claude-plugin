@@ -99,7 +99,7 @@ Or just ask a question. You do not need a command.
 
 ## What changed in 2.0
 
-- **Profile location (2.0.6).** The answer-style profile now lives in `.trackian/profile.md` in the folder you run Claude Code from. If you set one up before 2.0.6, run `/trackian:setup` once to save it there.
+- **Profile location (2.0.6, kept in 2.0.9).** The answer-style profile lives in `.trackian/profile.md` in the folder you run Claude Code from. If you set one up before 2.0.6, run `/trackian:setup` once to save it there.
 - **Browser sign-in.** Version 2 connects straight to `api.trackian.app` and signs in through your browser. Version 1 connected to an address that no longer answers.
 - **New `/trackian:setup`** and every Trackian guided workflow that is live today as a `/trackian:` command, the same workflows the downloadable Trackian agent folder runs. Merchant Center, Microsoft Ads and Tag Manager workflows join once Trackian switches those platforms on.
 - **Removed:** `/trackian:anomaly` (use `/trackian:investigate` or `/trackian:deep-dive`), `/trackian:analyze` (ask the question directly; Trackian answers from its reports and custom dashboards), and the three helper agents (replaced by one `marketing-analyst`). `/trackian:report` now saves a branded HTML report instead of answering in chat.
