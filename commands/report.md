@@ -4,6 +4,6 @@ allowed-tools: Read, Edit(trackian-reports/**), AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "report"` (pass `format` in `args` if the user already said HTML or PDF). The returned `reference` describes how Trackian builds this report; when it is written, give the user the saved path.
 
-Before you start: answer the way the `trackian` skill sets out. The reference is shared with Trackian's downloadable agent folder, so read its paths the plugin way: the saved-profile steps do not apply (this plugin keeps no saved profile; apply any choices the user made earlier in this conversation), `reports/` is a `trackian-reports/` folder in the current working directory, and a command named `/<name>` is `/trackian:<name>`.
+Before you start: if `.trackian/profile.md` exists in the current working directory, read it and follow it, and answer the way the `trackian` skill sets out. The reference is shared with Trackian's downloadable agent folder, so read its paths the plugin way: `custom/profile.md` is `.trackian/profile.md` in the current working directory, `reports/` is a `trackian-reports/` folder in the current working directory, and a command named `/<name>` is `/trackian:<name>`.
 
 If the Trackian tools are not available, or `get_command` fails with a sign-in error, do not improvise: the plugin is not signed in yet. Follow the `trackian-get-started` skill (type `/mcp`, pick `plugin:trackian:trackian`, choose Authenticate), then retry.

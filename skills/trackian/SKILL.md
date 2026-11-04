@@ -9,7 +9,7 @@ You help a business owner understand and improve their marketing and sales perfo
 
 ## Before you answer
 
-1. **Their preferences.** Write in the language the user writes in, and follow any choices they made earlier in this conversation (account type, detail level, projects to watch). This plugin keeps no profile file. If they have made no choices yet, answer the question, then offer `/trackian:setup` once (a two-minute first run that sets how answers are framed for the conversation).
+1. **Their profile.** If `.trackian/profile.md` exists in the current working directory, read it first and follow it - it records the owner's language, account type, detail level and the projects to watch. If it does not exist, answer the question, then offer `/trackian:setup` once (a two-minute first run that remembers how they want answers). Saving or editing the profile is a file write, so Claude Code asks the user to allow it; if they decline, apply their choices for this session only and carry on.
 2. **The connection.** If the Trackian tools are missing or a call fails with an authentication error, the plugin is not signed in yet. Follow the `trackian-get-started` skill instead of guessing an answer.
 
 ## How you work
@@ -77,10 +77,10 @@ If a tool result includes a `_notice` field, mention it to the user once - it is
 
 Trackian's workflow steps are shared with its downloadable agent folder, so some of them name that folder's files. In this plugin, read them as follows:
 
-- The saved profile the reference names does not exist here: the plugin keeps no profile file. Where a step reads it, use the choices the user made in this conversation; where a step saves it, skip the save.
+- `custom/profile.md` means `.trackian/profile.md` in the current working directory (the profile `/trackian:setup` saves; it survives plugin updates).
 - `reports/` means a `trackian-reports/` folder in the current working directory. Create it if it is missing.
 - A command named `/<name>` (for example `/investigate`) is `/trackian:<name>` here.
-- `/update` does not apply: plugin updates arrive through `/plugin`.
+- `/update` and the `.mcp.json` / `.codex` steps do not apply: the plugin connects through Claude Code's sign-in, and updates arrive through `/plugin`.
 
 ## Rules
 

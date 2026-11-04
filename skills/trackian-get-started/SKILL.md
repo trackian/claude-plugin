@@ -26,11 +26,11 @@ Get the user from a fresh install to a first real answer in as few steps as poss
 - If there are no projects, or a project has no platforms connected, send them to the Trackian app at https://trackian.app to add the project and connect Google Analytics, Google Ads, Meta Ads, TikTok Ads, Search Console, their store and the rest under Setup > Platforms. Trackian needs a few hours after a first connection to pull history; say so plainly.
 - For one project, `get_project_setup_status` tells you what is still unconfigured (alerts, KPIs, daily summary). Mention the gaps in one line and offer `/trackian:setup-project` for later.
 
-## 3. Ask how they want answers
+## 3. Save how they want answers
 
-Run the Trackian first-run steps: call `get_command` with `name: "start"` and follow the returned `reference` (language, account type, detail level, projects to watch). Apply the answers for the rest of this conversation and say so in one line. Skip the saved-profile step the reference describes: this plugin keeps no profile file, and the user repeats the questions with `/trackian:setup` whenever they want. The reference's capability tour uses bare names such as `/investigate`; in this plugin they are `/trackian:investigate`, `/trackian:weekly-review`, and so on.
+Run the Trackian first-run steps: call `get_command` with `name: "start"` and follow the returned `reference` (language, account type, detail level, projects to watch). Save the profile to `.trackian/profile.md` in the current working directory - that is where this plugin keeps it, in place of the `custom/profile.md` the reference names. Every Trackian command in this plugin reads it from there. Claude Code asks the user to allow that save; if they decline, use their answers for this session only. The reference's capability tour uses bare names such as `/investigate`; in this plugin they are `/trackian:investigate`, `/trackian:weekly-review`, and so on.
 
-If they want to skip the questions, skip them - they are optional and `/trackian:setup` can run again any time.
+If they want to skip the questions, skip them - the profile is optional and `/trackian:setup` can run again any time.
 
 ## 4. First answer
 
