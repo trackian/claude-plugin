@@ -2,7 +2,7 @@
 description: Explain one known incident (project + date + pattern) end to end.
 allowed-tools: Read, AskUserQuestion
 ---
-This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "deep-dive"`, passing `projectRef`, `date`, and `code` in `args` if the user gave them. The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
+This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "deep-dive"`, putting `projectRef`, `date`, and `code` in `args` if the user gave them. The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 
 Before you start: if `.trackian/profile.md` exists in the current working directory, read it and follow it, and answer the way the `trackian` skill sets out. The reference is shared with Trackian's downloadable agent folder, so read its paths the plugin way: `custom/profile.md` is `.trackian/profile.md` in the current working directory, `reports/` is a `trackian-reports/` folder in the current working directory, and a command named `/<name>` is `/trackian:<name>`.
 
