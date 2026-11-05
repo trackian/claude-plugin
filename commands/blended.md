@@ -1,5 +1,5 @@
 ---
-description: What all the advertising together actually made: blended return on ad spend, marketing efficiency ratio and cost per order, platform claims beside the site-side numbers.
+description: "What all the advertising together actually made: blended return on ad spend, marketing efficiency ratio and cost per order, platform claims beside the site-side numbers."
 allowed-tools: Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "blended"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.

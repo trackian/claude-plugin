@@ -1,5 +1,5 @@
 ---
-description: Google Ads keyword health from stored history: zero-conversion keywords, impression share lost to rank vs budget, duplicates across ad groups, match-type spread, Performance Max vs Search - each judged against its own campaign.
+description: "Google Ads keyword health from stored history: zero-conversion keywords, impression share lost to rank vs budget, duplicates across ad groups, match-type spread, Performance Max vs Search - each judged against its own campaign."
 allowed-tools: Read, AskUserQuestion
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "keyword-health"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
