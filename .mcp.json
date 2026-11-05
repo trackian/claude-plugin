@@ -2,7 +2,10 @@
   "mcpServers": {
     "trackian": {
       "type": "http",
-      "url": "https://api.trackian.app/mcp"
+      "url": "https://api.trackian.app/mcp",
+      "oauth": {
+        "scopes": "mcp:read mcp:write"
+      }
     }
   }
 }
