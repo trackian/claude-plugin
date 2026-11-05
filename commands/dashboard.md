@@ -2,7 +2,7 @@
 description: Build, edit, or delete a Custom dashboard for a project from a plain-English description.
 allowed-tools: Read, AskUserQuestion
 ---
-This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "dashboard"` (pass `projectRef` in `args` if the user already named a project). The returned `reference` describes how Trackian builds dashboards and which tools supply each piece; use it to carry out the request.
+This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "dashboard"` (put `projectRef` in `args` if the user already named a project). The returned `reference` describes how Trackian builds dashboards and which tools supply each piece; use it to carry out the request.
 
 Before you start: if `.trackian/profile.md` exists in the current working directory, read it and follow it, and answer the way the `trackian` skill sets out. The reference is shared with Trackian's downloadable agent folder, so read its paths the plugin way: `custom/profile.md` is `.trackian/profile.md` in the current working directory, `reports/` is a `trackian-reports/` folder in the current working directory, and a command named `/<name>` is `/trackian:<name>`.
 

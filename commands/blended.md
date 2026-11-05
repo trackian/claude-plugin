@@ -1,8 +1,8 @@
 ---
-description: What all the advertising together actually made: blended return on ad spend, marketing efficiency ratio and cost per order, platform claims beside the site-side numbers.
+description: "What all the advertising together actually made: blended return on ad spend, marketing efficiency ratio and cost per order, platform claims beside the site-side numbers."
 allowed-tools: Read, AskUserQuestion
 ---
-This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "blended"` (pass projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
+This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "blended"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 
 Before you start: if `.trackian/profile.md` exists in the current working directory, read it and follow it, and answer the way the `trackian` skill sets out. The reference is shared with Trackian's downloadable agent folder, so read its paths the plugin way: `custom/profile.md` is `.trackian/profile.md` in the current working directory, `reports/` is a `trackian-reports/` folder in the current working directory, and a command named `/<name>` is `/trackian:<name>`.
 
