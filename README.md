@@ -28,7 +28,7 @@ Run this once after installing:
 
 It walks you through four short steps:
 
-1. **Sign in.** Type `/mcp`, pick `plugin:trackian:trackian` and choose **Authenticate**. A Trackian page opens in your browser: sign in, or create an account, and you are sent back to Claude Code. There is nothing to copy or paste.
+1. **Sign in.** Type `/mcp`, pick `plugin:trackian:trackian` and choose **Authenticate**. A Trackian page opens in your browser: sign in, or create an account, and you are sent back to Claude Code. There is no API key to copy or paste.
 2. **Check your projects.** Claude lists your Trackian projects and tells you which platforms still need connecting. Platforms are connected in the Trackian app at [trackian.app](https://trackian.app) under Setup > Platforms.
 3. **Choose how answers are written.** Language, account type (agency, ecommerce or lead gen), how much detail, and which projects to watch. Saved on your machine (Claude Code asks once to allow the save) and read whenever you run a Trackian command or ask a marketing question.
 4. **First answer.** Claude offers one first look at your data, such as a briefing across projects or an ad audit.
@@ -99,14 +99,13 @@ Or just ask a question. You do not need a command.
 
 ## What changed in 2.0
 
-- **Profile location (2.0.6, kept in 2.0.9).** The answer-style profile lives in `.trackian/profile.md` in the folder you run Claude Code from. If you set one up before 2.0.6, run `/trackian:setup` once to save it there.
-- **Browser sign-in.** Version 2 connects straight to `api.trackian.app` and signs in through your browser. Version 1 connected to an address that no longer answers.
+- **Sign-in replaces the API key.** Version 1 asked you to paste a key into `plugin.json` and ran a local bridge to an address that no longer answers. Version 2 connects straight to `api.trackian.app` and signs in through your browser.
 - **New `/trackian:setup`** and every Trackian guided workflow that is live today as a `/trackian:` command, the same workflows the downloadable Trackian agent folder runs. Merchant Center, Microsoft Ads and Tag Manager workflows join once Trackian switches those platforms on.
 - **Removed:** `/trackian:anomaly` (use `/trackian:investigate` or `/trackian:deep-dive`), `/trackian:analyze` (ask the question directly; Trackian answers from its reports and custom dashboards), and the three helper agents (replaced by one `marketing-analyst`). `/trackian:report` now saves a branded HTML report instead of answering in chat.
 
 ## Upgrading from version 1
 
-Version 1 was listed in the community directory as `trackian-mcp-server`. It connected to an address that no longer answers, so it cannot reach Trackian any more. If `/plugin` shows `trackian-mcp-server` at version 1.0.0, remove it, then install version 2 as shown under [Installation](#installation):
+Version 1 was listed in the community directory as `trackian-mcp-server`. It asked for an API key and connected through an address that no longer answers, so it cannot reach Trackian any more. If `/plugin` shows `trackian-mcp-server` at version 1.0.0, remove it, then install version 2 as shown under [Installation](#installation):
 
 ```bash
 claude plugin uninstall trackian-mcp-server@claude-community
@@ -114,7 +113,7 @@ claude plugin uninstall trackian-mcp-server@claude-community
 
 ## Privacy
 
-The plugin contains no hooks and no local code. Claude Code sends requests to Trackian's MCP server at `api.trackian.app`, which reads data from, and makes approved changes on, the platforms you connected in Trackian. Sign-in uses OAuth in your browser and Claude Code keeps the sign-in itself; the plugin has nothing to read and never sees a password. The answer-style profile `/trackian:setup` saves stays on your machine, in `.trackian/profile.md` in the folder you run Claude Code from. Trackian processes requests under its [Privacy Policy](https://trackian.com/privacy-center/privacy-policy/).
+The plugin contains no hooks and no local code. Claude Code sends requests to Trackian's MCP server at `api.trackian.app`, which reads data from, and makes approved changes on, the platforms you connected in Trackian. Sign-in uses OAuth in your browser; Claude Code stores the access token itself and the plugin never sees a password. The answer-style profile `/trackian:setup` saves stays on your machine, in the plugin's data folder. Trackian processes requests under its [Privacy Policy](https://trackian.com/privacy-center/privacy-policy/).
 
 ## Links
 
