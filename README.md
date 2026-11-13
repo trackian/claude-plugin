@@ -37,11 +37,13 @@ It walks you through four short steps:
 
 | Command | What it does |
 |---------|--------------|
-| `/trackian:setup` | Sign in, see your projects, choose how answers are written, first answer |
+| `/trackian:setup` | Sign in, see your projects, choose how answers are written, choose a first answer |
 | `/trackian:start` | Same as `/trackian:setup` |
 | `/trackian:investigate` | Find what changed in a project and why |
 | `/trackian:deep-dive` | Explain one known incident end to end |
 | `/trackian:briefing` | What happened across all your projects |
+| `/trackian:daily-findings` | The morning check: did anything go wrong yesterday, what it costs and what to do |
+| `/trackian:revenue-drop` | Why revenue dropped: whether it is real, what caused it in money, and what to do |
 | `/trackian:weekly-review` | The week in one summary |
 | `/trackian:opportunities` | Where to grow |
 | `/trackian:pacing` | Month-to-date vs target for every KPI, with the projected month-end |
@@ -56,7 +58,7 @@ It walks you through four short steps:
 | `/trackian:funnel-dropoff` | Where people leave between the Meta ad click and the purchase |
 | `/trackian:landing-pages` | Paid landing pages that convert badly or are not tracked |
 | `/trackian:attribution-gap` | What the ad platforms claim vs what analytics saw |
-| `/trackian:blended` | What all the advertising together made: blended return and cost per order |
+| `/trackian:blended` | What the advertising really brought back: platform claims next to what the store took, as a one-page report |
 | `/trackian:recommendations` | Google's and Meta's own recommendations, filtered |
 | `/trackian:setup-project` | Improve a project's alerts, KPIs, custom metrics and funnels |
 | `/trackian:dashboard` | Build or edit a custom dashboard from a plain-English description (on Trackian plans that include custom dashboards) |
