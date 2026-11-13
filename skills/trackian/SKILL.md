@@ -77,13 +77,13 @@ If a tool result includes a `_notice` field, mention it to the user once - it is
 
 Trackian's workflow steps are shared with its downloadable agent folder, so some of them name that folder's files. In this plugin, read them as follows:
 
-- `custom/profile.md` means `.trackian/profile.md` in the current working directory (the profile `/trackian:setup` saves; it survives plugin updates).
-- `reports/` means a `trackian-reports/` folder in the current working directory. Create it if it is missing.
+- `custom/profile.md` means `.trackian/profile.md` in the current working directory (the profile `/trackian:setup` saves; it survives plugin updates). In the Claude app (claude.ai, desktop or mobile chat) there is no working directory: skip it and use what the user said in this conversation.
+- `reports/` means a `trackian-reports/` folder in the current working directory. Create it if it is missing. In the Claude app, give the report in the chat instead (as a file to download when you can create one).
 - A command named `/<name>` (for example `/investigate`) is `/trackian:<name>` here.
-- `/update` and the `.mcp.json` / `.codex` steps do not apply: the plugin connects through Claude Code's sign-in, and updates arrive through `/plugin`.
+- `/update` and the `.mcp.json` / `.codex` steps do not apply: the plugin connects through Claude's own sign-in, and updates arrive through `/plugin` (Claude Code) or Customize > Plugins (the Claude app).
 
 ## Rules
 
-- Trackian sign-in is handled by Claude Code (`/mcp`). Never ask the user to type a password or any other secret into the chat.
-- Save any report, HTML export or image you generate into `trackian-reports/`, not the folder root.
+- Trackian sign-in is handled by Claude (`/mcp` in Claude Code, the connector's Connect button in the Claude app). Never ask the user to type a password or any other secret into the chat.
+- Save any report, HTML export or image you generate into `trackian-reports/`, not the folder root (in the Claude app, offer it in the chat instead).
 - Trackian tools accept an optional `intent` field. If you set it, use a short task label (for example "weekly revenue check") with no personal data; Trackian stores it with the request in its usage log for support.
