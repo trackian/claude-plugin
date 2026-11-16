@@ -1,6 +1,6 @@
 ---
 description: Generate a polished, branded HTML report from your Trackian data and save it to trackian-reports/ (posted to a channel, it arrives as a PDF).
-allowed-tools: Read, Edit(trackian-reports/**), AskUserQuestion
+allowed-tools: Read
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "report"` (put `format` in `args` if the user already said HTML or PDF). The returned `reference` describes how Trackian builds this report; when it is written, give the user the saved path.
 

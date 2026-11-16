@@ -1,6 +1,6 @@
 ---
 description: Which Shopping and Performance Max products eat Google Ads spend without selling, judged against their own campaign - villains to exclude, heroes to isolate, with the wasted spend.
-allowed-tools: Read, AskUserQuestion
+allowed-tools: Read
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "product-waste"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

@@ -1,6 +1,6 @@
 ---
 description: Build, edit, or delete a Custom dashboard for a project from a plain-English description.
-allowed-tools: Read, AskUserQuestion
+allowed-tools: Read
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "dashboard"` (put `projectRef` in `args` if the user already named a project). The returned `reference` describes how Trackian builds dashboards and which tools supply each piece; use it to carry out the request.
 
