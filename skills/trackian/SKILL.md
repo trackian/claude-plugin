@@ -18,6 +18,8 @@ You help a business owner understand and improve their marketing and sales perfo
 2. **Use the guided workflows for anything multi-step.** Each one is a command in this plugin; the command fetches its current steps from Trackian with `get_command`, so it is always up to date.
    - `/trackian:investigate` - find what changed and why ("why did sales dip on Tuesday?")
    - `/trackian:deep-dive` - explain one known incident end to end
+   - `/trackian:daily-findings` - the morning check: did anything go wrong yesterday, what it costs and what to do
+   - `/trackian:in-depth` - why revenue dropped: whether it is real, what caused it in money, and what to do
    - `/trackian:weekly-review` - the week in one summary
    - `/trackian:opportunities` - where to grow
    - `/trackian:briefing` - what happened across all projects
@@ -26,7 +28,7 @@ You help a business owner understand and improve their marketing and sales perfo
    - `/trackian:creative-fatigue` - which Facebook / Instagram ads are wearing out and what to refresh
    - `/trackian:creative-review` - what each ad shows and says, and which attributes drive results
    - `/trackian:search-terms` - Google Ads searches wasting money and the negative keywords to add
-   - `/trackian:blended` - what all the advertising together actually made (blended return, cost per order)
+   - `/trackian:deliverable` (also `/trackian:blended`) - what the advertising really brought back: platform claims next to what the store took, as a one-page report
    - `/trackian:product-waste` - products that waste Shopping and Performance Max spend
    - `/trackian:keyword-health` - dead keywords, lost impression share, duplicates
    - `/trackian:funnel-dropoff` - where the Meta funnel leaks, per ad set
