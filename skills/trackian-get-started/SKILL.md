@@ -36,7 +36,7 @@ If they want to skip the questions, skip them - the profile is optional and `/tr
 
 The reference from step 3 ends with a section called "What to do next": one question, "What would you like to do next?", whose options are the questions an owner asks most, each with the name of the workflow that answers it. Ask that question with the client's own choice tool (`AskUserQuestion` in Claude Code), with the options as the reference gives them, so the user answers with a tap. The options live in Trackian and can change, so take them from the reference each time.
 
-On a choice, run the plugin command of that workflow: `/trackian:daily-findings` (did anything go wrong yesterday), `/trackian:blended` (what the ads brought back) or `/trackian:revenue-drop` (why revenue dropped); a workflow the reference names that is not in this list runs as `/trackian:<name>`. "Not now" ends the setup.
+On a choice, run the plugin command of that workflow: `/trackian:daily-findings` (did anything go wrong yesterday), `/trackian:deliverable` (what the ads brought back) or `/trackian:in-depth` (why revenue dropped); a workflow the reference names that is not in this list runs as `/trackian:<name>`. "Not now" ends the setup.
 
 If the reference has no such section, offer one concrete first look for what is connected, and run it on a yes:
 

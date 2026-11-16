@@ -1,8 +1,8 @@
 ---
-description: "Why revenue dropped: whether it is real, what caused it in money, and what to do."
+description: "What the advertising really brought back: what each ad platform claims next to what the store took, the real return and cost per order, as a one-page report."
 allowed-tools: Read, AskUserQuestion
 ---
-This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "revenue-drop"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
+This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "deliverable"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 
 Before you start: if `.trackian/profile.md` exists in the current working directory, read it and follow it, and answer the way the `trackian` skill sets out. The reference is shared with Trackian's downloadable agent folder, so read its paths the plugin way: `custom/profile.md` is `.trackian/profile.md` in the current working directory, `reports/` is a `trackian-reports/` folder in the current working directory, and a command named `/<name>` is `/trackian:<name>`.
 

@@ -43,7 +43,7 @@ It walks you through four short steps:
 | `/trackian:deep-dive` | Explain one known incident end to end |
 | `/trackian:briefing` | What happened across all your projects |
 | `/trackian:daily-findings` | The morning check: did anything go wrong yesterday, what it costs and what to do |
-| `/trackian:revenue-drop` | Why revenue dropped: whether it is real, what caused it in money, and what to do |
+| `/trackian:in-depth` | Why revenue dropped: whether it is real, what caused it in money, and what to do |
 | `/trackian:weekly-review` | The week in one summary |
 | `/trackian:opportunities` | Where to grow |
 | `/trackian:pacing` | Month-to-date vs target for every KPI, with the projected month-end |
@@ -58,7 +58,8 @@ It walks you through four short steps:
 | `/trackian:funnel-dropoff` | Where people leave between the Meta ad click and the purchase |
 | `/trackian:landing-pages` | Paid landing pages that convert badly or are not tracked |
 | `/trackian:attribution-gap` | What the ad platforms claim vs what analytics saw |
-| `/trackian:blended` | What the advertising really brought back: platform claims next to what the store took, as a one-page report |
+| `/trackian:deliverable` | What the advertising really brought back: platform claims next to what the store took, as a one-page report |
+| `/trackian:blended` | Same as `/trackian:deliverable` |
 | `/trackian:recommendations` | Google's and Meta's own recommendations, filtered |
 | `/trackian:setup-project` | Improve a project's alerts, KPIs, custom metrics and funnels |
 | `/trackian:dashboard` | Build or edit a custom dashboard from a plain-English description (on Trackian plans that include custom dashboards) |
