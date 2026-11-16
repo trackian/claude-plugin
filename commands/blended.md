@@ -1,6 +1,6 @@
 ---
 description: "Same as /trackian:deliverable - what the advertising really brought back: what each ad platform claims next to what the store took, as a one-page report."
-allowed-tools: Read, AskUserQuestion
+allowed-tools: Read
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "blended"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

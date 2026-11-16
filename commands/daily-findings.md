@@ -1,6 +1,6 @@
 ---
 description: "The morning check of a project: did anything go wrong on the most recent settled day, what it costs and what to do."
-allowed-tools: Read, AskUserQuestion
+allowed-tools: Read
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "daily-findings"` (put projectRef and days, or startDate and endDate, in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 

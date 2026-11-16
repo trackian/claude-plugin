@@ -1,6 +1,6 @@
 ---
 description: Countries and regions where Meta and Google spend without results, judged against the account's own cost per result - exclude, reduce, scale.
-allowed-tools: Read, AskUserQuestion
+allowed-tools: Read
 ---
 This command's steps live in Trackian and are always up to date. Call `get_command` with `name: "geo-waste"` (put projectRef and dateRange in `args` if the user named them). The returned `reference` describes how Trackian approaches this workflow and which tools supply each piece of evidence; use it to carry out the request.
 
