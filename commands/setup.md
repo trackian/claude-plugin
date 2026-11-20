@@ -1,12 +1,7 @@
 ---
-description: Set up Trackian - sign in, see your projects and connected platforms, choose how answers are written, and choose a first answer.
+description: Same as /trackian:download-setup - sign in, see your projects and connected platforms, choose how answers are written, and choose a first answer.
 allowed-tools: Read
 ---
-Follow the `trackian-get-started` skill from the top:
+This is an alias for `/trackian:download-setup`. Its steps live in Trackian and are always up to date. Call `get_command` with `name: "download-setup"`. The returned `reference` describes the setup: the sign-in check, the projects, how answers are written and the first answer; use it to carry out the request.
 
-1. Check the sign-in with `get_connected_account`. If the Trackian tools are missing or the call fails with a sign-in error, walk the user through the sign-in step of the skill: in Claude Code `/mcp` > `plugin:trackian:trackian` > Authenticate, in the Claude app the Trackian connector's Connect button (either way the browser page also creates a Trackian account for someone who has none), then retry.
-2. Show their projects with `list_projects` and say which platforms still need connecting in the Trackian app.
-3. Run the first-run questions from `get_command` with `name: "start"`, and save the profile to `.trackian/profile.md` in the current working directory (this plugin's place for the `custom/profile.md` the reference names). If a profile already exists there, show it and ask what to change instead of starting over. In the Claude app there is no working directory: use the answers for this conversation only and say so.
-4. Ask the "What to do next" question the reference ends with, using the choice tool, and run the workflow the user chooses.
-
-Never ask the user to type a password or any other secret into the chat.
+If the Trackian tools are not available, or `get_command` fails with a sign-in error, do not improvise: Trackian is not signed in yet. In Claude Code, type `/mcp`, pick `plugin:trackian:trackian` and choose Authenticate; in the Claude app, choose Connect on the Trackian connector. Sign in on the Trackian page that opens, then retry. Never ask the user to type a password or any other secret into the chat.
