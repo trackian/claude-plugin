@@ -1,7 +1,7 @@
 ---
-description: Alias for /trackian:setup - sign in, choose how answers are written, and choose a first answer.
+description: Same as /trackian:download-setup - sign in, choose how answers are written, and choose a first answer.
 allowed-tools: Read
 ---
-This is an alias for `/trackian:setup`. Follow the `trackian-get-started` skill from the top: check the sign-in, show the projects, run the first-run questions from `get_command` with `name: "start"` and save the profile to `.trackian/profile.md` in the current working directory (in the Claude app, where there is none, keep the answers for this conversation), then ask the "What to do next" question the reference ends with and run the workflow the user chooses.
+This is an alias for `/trackian:download-setup`. Its steps live in Trackian and are always up to date. Call `get_command` with `name: "download-setup"`. The returned `reference` describes the setup: the sign-in check, the projects, how answers are written and the first answer; use it to carry out the request.
 
-Never ask the user to type a password or any other secret into the chat.
+If the Trackian tools are not available, or `get_command` fails with a sign-in error, do not improvise: Trackian is not signed in yet. In Claude Code, type `/mcp`, pick `plugin:trackian:trackian` and choose Authenticate; in the Claude app, choose Connect on the Trackian connector. Sign in on the Trackian page that opens, then retry. Never ask the user to type a password or any other secret into the chat.
