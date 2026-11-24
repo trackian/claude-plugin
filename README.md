@@ -23,10 +23,10 @@ Installed version 1 as `trackian-mcp-server` from the community directory? See [
 Run this once after installing:
 
 ```
-/trackian:setup
+/trackian:download-setup
 ```
 
-It walks you through four short steps:
+(`/trackian:setup` does the same.) The steps are downloaded from Trackian each time you run it, so they are always current. It walks you through four short steps:
 
 1. **Sign in.** Type `/mcp`, pick `plugin:trackian:trackian` and choose **Authenticate**. A Trackian page opens in your browser: sign in, or create an account, and you are sent back to Claude Code. There is nothing to copy or paste.
 2. **Check your projects.** Claude lists your Trackian projects and tells you which platforms still need connecting. Platforms are connected in the Trackian app at [trackian.app](https://trackian.app) under Setup > Platforms.
@@ -37,8 +37,9 @@ It walks you through four short steps:
 
 | Command | What it does |
 |---------|--------------|
-| `/trackian:setup` | Sign in, see your projects, choose how answers are written, choose a first answer |
-| `/trackian:start` | Same as `/trackian:setup` |
+| `/trackian:download-setup` | Sign in, see your projects, choose how answers are written, choose a first answer. The steps are downloaded from Trackian |
+| `/trackian:setup` | Same as `/trackian:download-setup` |
+| `/trackian:start` | Same as `/trackian:download-setup` |
 | `/trackian:investigate` | Find what changed in a project and why |
 | `/trackian:deep-dive` | Explain one known incident end to end |
 | `/trackian:briefing` | What happened across all your projects |
