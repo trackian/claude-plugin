@@ -4,7 +4,7 @@ Ask Claude why sales moved, which ads waste money and what to fix next, answered
 
 ## What this plugin does
 
-- **Answers questions in plain business language:** "why did sales dip on Tuesday?", "which campaigns should I cut?", "are we on track this month?" Every number comes from a Trackian tool call, with the steps shown at the end.
+- **Answers questions in plain business language:** "why did sales dip on Tuesday?", "which campaigns should I cut?", "are we on track this month?" Every figure about your business comes from a tool call, never from memory, and Claude still uses the files you share, its other tools and connections, web pages and general marketing knowledge alongside Trackian, with the sources shown at the end.
 - **Runs guided workflows:** investigations, weekly reviews, pacing against targets, ad audits, creative fatigue, wasted search terms, product and geo waste, attribution gaps, landing pages and branded reports.
 - **Makes changes only after you confirm:** KPI targets, alert settings, custom metrics and funnels. Every change shows a preview first and waits for your yes. Changes to live ad campaigns (status, budgets, keywords, ad copy) and to WooCommerce or Magento products and orders are off for a new connection; an account owner can switch them on in Trackian under Settings > AI Agent Setup. Search Console changes and Shopify edits are not available yet.
 - **Delivers results where your team works:** post a report to your connected Slack or Discord channel, or email it to the people on your Trackian account.
@@ -70,7 +70,7 @@ Or just ask a question. You do not need a command.
 
 ## Skills and agents
 
-- **`trackian`** loads automatically for marketing questions. It holds the rules Claude follows: answer from Trackian data only, lead with the conclusion and business impact, show the steps taken, keep currencies straight, and ask before every change.
+- **`trackian`** loads automatically for questions about your own marketing results. It holds the rules Claude follows: account figures come from tool calls and are never made up, other sources are named alongside Trackian's, lead with the conclusion and business impact, show the steps taken, keep currencies straight, and ask before every change.
 - **`trackian-get-started`** loads when the plugin is new or not signed in, and walks you through setup.
 - **`marketing-analyst`** is a subagent for long, multi-step analysis, so the main conversation only gets the conclusion.
 
